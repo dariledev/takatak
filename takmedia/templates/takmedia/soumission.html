@@ -1,0 +1,82 @@
+{% extends 'takmedia/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="section"  style="border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+        <h4 class="title is-5 has-text-centered" style="color: rgb(14, 10, 51);">HEURES D’OUVERTURE</h1>
+        <p class="subtitle is-6 has-text-centered">Nos heures de travail officielles sont du lundi au vendredi de 8h à 18h. Cependant, n’hésitez pas à nous appeler en dehors de ces heures, il nous fera plaisir de vous répondre si nous sommes disponibles</p>
+        
+        <div class="box" style="background-color:lightgrey;">
+            <h1 class="title is-4" style="color: rgb(14, 10, 51);">LÂCHEZ NOUS UN COUP DE FIL !</h1>
+        <h4 class="subtitle is-5 has-text-centered">CONTACTEZ-NOUS</h4>
+        <p class="subtitle is-7" style="color: rgb(14, 10, 51)">Phone: +241 62-923-520 <br>
+           phone:  +216 51-208-699</p>
+        <p class="subtitle is-7" style="color: rgb(14, 10, 51)">Adress email: tak.media@tech.com</p>
+    </div>
+        </div>   
+    
+</section>
+
+<section class="section" style="background-color: lightgrey; background-position: center; background-repeat: no-repeat;background-size: cover; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+     <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">Obtenez une soumission gratuite</h4>
+      <p class="subtitle is-6 has-text-centered">Profitez d’un service personnalisé et de qualité. Si vous avez des demandes ou des questions, vous recevrez une réponse dans les 24h.</p>
+      <div class="field">
+        <div class="control">
+          <form method="post">
+            {% csrf_token %}
+            <label class="label">Nom</label>
+            <input type="text" class="input m-2" name="nom">
+            <label class="label">Courriel</label>
+            <input type="email" class="input m-2" name="courrier">
+  
+            <label class="label">Numero</label>
+            <input type="text" class="input m-2" name="numero">
+
+            <label class="label">Entreprise</label>
+            <input type="text" class="input m-2" name="entreprise">
+         
+
+            <label  class="label">Sujet</label>
+            <select class="select" name="sujet" id="">
+              <option value="Création de site Web">Création de site Web</option>
+              <option value="Référencement Google">Référencement Google</option>
+              <option value="Application web">Application web</option>
+              <option value="Google Ads (SEM)">Google Ads (SEM)</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Autre">Autre</option>
+
+
+            </select>
+
+              <label class="label">Mesage</label>
+            <textarea name="message" id="" cols="42" rows="10"  placeholder="Message">
+  
+            </textarea>
+            <br>
+         
+            <input type="submit" class="button is-rounded is-link">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

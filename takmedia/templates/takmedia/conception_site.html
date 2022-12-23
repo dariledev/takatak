@@ -1,0 +1,162 @@
+{% extends 'takmedia/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="hero" style="background-image: url(/static/image/website.jpg); background-position: center; background-repeat: no-repeat;background-size: cover; height: 70vh; border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="hero-body">
+    </div>
+    <h4 class="title is-5 has-text-centered" style="color: rgb(14, 10, 51);">CONCEPTION DE SITE WEB</h1>
+    
+</section>
+
+
+
+
+
+
+<section class="section has-text-centered" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+        <div class="columns">
+          
+            <div class="column">
+                <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">SITE WEB « RESPONSIVE »</h4>
+                <p>Un site Web se doit dorénavant d’être adapté pour toutes les plateformes, c’est pourquoi tous nos sites sont 100% “responsive”.</p>
+                <a href="#popup1" class="button is-link is-rounded is-small mt-3">en savoir plus</a>
+
+            </div>
+            <div id="popup1" class="overlay">
+              <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <div class="content p-5">
+                  Depuis quelques années, avec la montée en popularité des téléphones intelligents et des tablettes électroniques, un site Web se doit impérativement d’être “responsive”, donc de fonctionner sur toutes les plates-formes. En effet, en 2017, 55% des pages consultées sur Internet ont été regardées à partir d’un téléphone intelligent ou d’une tablette. C’est pourquoi tous les sites Web que l’Agence Flex conçoit sont totalement adaptés aux différentes plates-formes.
+                </div>
+              </div>
+            </div>
+            <div class="column">
+                <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">BOUTIQUE EN LIGNE</h4>
+                <p>BOUTIQUE EN LIGNE
+                    Il existe plusieurs logiciels disponibles pour être en mesure d’accepter les paiements par cartes de crédit qui font directement le lien avec un compte bancaire. Que ce soit Stripe, Moneris ou Paypal, nous pourrons l’intégrer à votre boutique en ligne et ainsi faciliter toutes vos transactions.</p>
+                    <a href="{% url 'boutique-en-ligne' %}" class="button is-link is-rounded is-small mt-3">en savoir plus</a>
+            </div>
+            <div class="column">
+                <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">DESIGN WEB</h4>
+                <p>Un design fort saura communiquer l'histoire et les valeurs de votre entreprise et créer un lien émotionnel avec vos clients.</p>
+                <a href="{% url 'design-web' %}" class="button is-link is-rounded is-small mt-3">en savoir plus</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" >
+        <h1 class="title is-5" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TECHNOLOGIES UTILISÉES</h1>
+        <p class="subtitle is-6">CMS WordPress ou programmation sur mesure, nous prendrons le temps d’évaluer vos besoins afin de vous offrir une solution optimale.</p>
+        <a href="{% url 'programmation-integration' %}" class="button is-link is-rounded">en savoir plus</a>
+
+    </div>
+</section>
+
+<!--<section class="section has-text-centered" style="background-color:rgb(14, 10, 51); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+        <h1 class="title is-5 has-text-white">BESOIN D'AIDE ?</h1>
+        <a href="{% url 'soumission' %}" class="button">DEMANDER  UNE SOUMISSION</a>
+
+    </div>
+</section>-->
+
+
+
+
+<style>
+
+
+
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+/*
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
+{% endblock %}

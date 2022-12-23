@@ -1,0 +1,51 @@
+{% extends 'takmedia/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="section">
+    <div class="container">
+    
+    <h1 class="title is-5 has-text-centered" style="color: rgb(14, 10, 51);">Ils nous font confiance</h1>
+
+    <div class="columns">
+        <div class="column">
+            <div class="card m-2 p-2">
+            <img src="{% static 'image/logo1.png' %}" style="height: 100px;" alt="">
+            <hr>
+            <h4 class="subtitle is-5"> Academie sherbrooke tunisie canada</h4>
+            <h4 class="subtitle is-6" style="text-decoration: underline;">depuis 2021</h4>
+        </div>
+    </div>
+        <div class="card m-2 p-2">
+        <div class="column">
+            <img src="{% static 'image/logo-theme.png' %}" style="height: 100px;" alt="">
+            <hr>
+            <h4 class="subtitle is-5">Ecs Formation</h4>
+            <h4 class="subtitle is-6" style="text-decoration: underline;">depuis 2022</h4>
+        </div>
+    </div>
+        <div class="card m-2 p-2">
+        <div class="column">
+            <img src="{% static 'image/raba0.png' %}" style="height: 200px;" alt="">
+            <hr>
+            <h4 class="subtitle is-5">E-rabat</h4>
+            <h4 class="subtitle is-6" style="text-decoration: underline;">depuis 2022</h4>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+
+
+
+
+<section class="section has-text-centered" style="background-color: rgb(14, 10, 51); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+        <h1 class="title is-2 has-text-white">BESOIN D'AIDE ?</h1>
+        <a href="{% url 'soumission' %}" class="button">DEMANDER  UNE SOUMISSION</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/091ff265be.js" crossorigin="anonymous"></script>
+  <title>TAK-MEDIA</title>
+</head>
+<body>
+  
+  <nav class="navbar" style="padding: 5px;" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a href="{% url 'index' %}">
+        <img src="{% static 'image/logo/TAK-MEDIA_icône_Couleur_.png' %}" style="height: 40px; width: 100px; margin-top: 5px;">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a href="{% url 'expertise' %}" class="navbar-link is-left" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Expertises
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a href="{% url 'conception-site-web' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              Conception de Site Web
+            </a>
+            <a href="{% url 'application-web' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              Application web
+            </a>
+            <a href="{% url 'referencement' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              référencement (SEO)
+            </a>
+
+            <a href="{% url 'addsent' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              référencement payant (Adwords)
+            </a>
+            <a href="{% url 'analyse-web' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              Analyse de vos performances web
+            </a>
+
+            <a href="{% url 'digital-social' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              Digital et social media
+            </a>
+            
+            
+            <hr class="navbar-divider">
+            <a href="{% url 'design-web' %}" class="navbar-item" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              Design
+            </a>
+          </div>
+        </div>
+        <a class="navbar-item" href="{% url 'clients' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          Clients
+        </a>
+
+        <!--<a class="navbar-item">
+          Équipe
+        </a>
+
+        <a class="navbar-item">
+          Carrières
+        </a>
+      </div>-->
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-link" href="{% url 'soumission' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+              <strong>Demande d'information</strong>
+            </a>
+            <!--<a class="button is-light">
+              Log in
+            </a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  {% block content %}
+  {% endblock %}
+
+
+
+  <section class="section" style="background-color: rgb(14, 13, 13);">
+    <div class="container">
+      <p class="subtitle is-6">2022 © Tous droits réservés - TAK-MEDIA</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+  </script>
+</body>
+</html>
