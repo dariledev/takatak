@@ -2,14 +2,13 @@
 {% load static %}
 {% block content %}
 
-<section class="section mb-6" style="background-image: url(/static/image/banner-ge3e0698ce_1920.jpg); height: 90vh; background-position: center; background-repeat: no-repeat;">
+<section class="section mb-6" style="background-image: url(/static/image/www-g4b01c07fb_1920.png); height: 70vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
   
     <div class="container">
-     <h1 class="title is-1 has-text-centered has-text-white mt-6" style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">Optimisez votre presence sur le web</h1>
-      <p class="subtitle is-4 has-text-centered has-text-white mt-6" style="font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Des stratégies numérique performantes.</p>
-      <!--<img src="{% static 'image/flech.png' %}" style="height: 100px; margin: 5px;" alt="">
-      <img src="{% static 'image/flech1.png' %}" style="height: 100px; margin: 5px;" alt="">-->
-      <!--<img src="{% static 'image/pc.png' %}" style="height: 250px; float: right;" alt="">-->
+      
+     <h1 class="title is-1 has-text-centered mt-6" style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(14, 10, 51);">Optimisez votre presence sur le web</h1>
+    
+    
       <!--<span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>-->
@@ -32,10 +31,13 @@
 
 
 <section class="section">
+  <p class="subtitle is-4 has-text-centered  mt-6" style="font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;color: rgb(14, 10, 51);">Des stratégies numérique performantes.</p>
+
   <div class="container">
+    <div data-aos="zoom-in-up">
     <div class="box">
     <div class="columns">
-      <div class="column m-2" style="background-color: rgba(199, 212, 212, 0.89); border-radius: 1px solid; box-shadow: 10px 10px rgb(14, 10, 51); font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      <div class="column m-2" style="background-color: rgba(199, 212, 212, 0.89); border-radius: 1px solid; box-shadow: 10px 10px rgb(14, 10, 51); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">
           À PROPOS
         </h4>
@@ -54,6 +56,7 @@
       </div>
     </div>
   </div>
+</div>
   </div>
 </section>
 
@@ -61,17 +64,17 @@
 
 <section class="section">
   <div class="container">
- <h4 class="subtitle is-4 mb-6 has-text-centered" style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(14, 10, 51); ">Le Web est notre passion </h4>
+ <h4 class="title is-2 mb-6 has-text-centered" style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(14, 10, 51); ">Le Web est notre passion </h4>
     <div class="columns">
       <div class="column">
-        <img src="{% static 'image/bullet-g056c81a50_1920.png' %}" style="height: 300px;" alt="">
+        <img src="{% static 'image/bullet-g056c81a50_1920.png' %}" style="height: 250px;" alt="">
 
       </div>
       <div class="column">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
-      <img src="{% static 'image/logo/TAK-MEDIA_icône&TypoCouleur_.png' %}" style="height: 300px;" alt="">
+      <img src="{% static 'image/logo/TAK-MEDIA_icône&TypoCouleur_.png' %}" style="height: 250px;" alt="">
       </div>
 
     </div>
@@ -129,7 +132,7 @@
       </div>
     </div>-->
 
-
+    <div data-aos="zoom-in-up">
     <div class="columns mt-6" style="border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
       <div class="card m-2" style="background-color: rgba(226, 213, 213, 0.644);">
       <div class="column">
@@ -160,6 +163,7 @@
       </div>
       </div>
     </div>
+    </div>
   </div>
 </section>
    
@@ -169,6 +173,8 @@
     <p class="subtitle is-5" style="border-radius: 1px solid;  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nous vous aidons à mettre en place une stratégie marketing qui apportera des informations utiles à votre clientèle.</p>
         <a href="{% url 'expertise' %}" class="button m-2">Découvrez notre Expertises</a>
         <a href="{% url 'soumission' %}" class="button is-link m-2">Contactez notre equipe</a>
+        <!--<img src="{% static 'image/flech.png' %}" style="height: 100px; margin: 5px;" alt="">
+      <img src="{% static 'image/flech1.png' %}" style="height: 100px; margin: 5px;" alt="">-->
   </div>
 </section>
 
@@ -176,6 +182,7 @@
 <section class="section">
   <div class="container">
     <h2 class="subtitle is-5" style="color: rgb(14, 10, 51);">NOS AUTRES SERVICES</h2>
+    <div data-aos="zoom-in-up">
     <div class="columns mt-6" style="border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
       <div class="card m-2" style="background-color: rgba(226, 213, 213, 0.644);">
       <div class="column">
@@ -205,15 +212,18 @@
       </div>
       </div>
     </div>
+    </div>
   </div>
 </section>
 
 
 
-<section class="section" style="background-color: lightgray ; border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
+<section class="section" style="background-color: rgba(226, 213, 213, 0.644); border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
   <div class="container">
-    <h4 class="subtitle is-5" style="color: rgb(38, 8, 168);">NOS MÉTHODES DE TRAVAIL</h4>
+    
+    <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">NOS MÉTHODES DE TRAVAIL</h4>
     <p class="subtitle is-5">Notre processus lors d’un projet est principalement axé sur les besoins de notre clientèle. <br> Nous allons bien sûr écouter vos idées et votre vision, mais nous allons aussi prendre le temps d’évaluer la situation pour vous proposer des solutions auxquelles vous n’auriez peut-être pas pensé. <br> Ralliant vos idées et notre expertise, le résultat ne peut qu’être génial !</p>
+  
   </div>
 </section>
 
@@ -222,31 +232,46 @@
 
 <section class="section">
   <div class="container">
+    <div data-aos="zoom-in-up">
     <div class="columns p-3 mt-3" style="border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      <div class="card m-2 p-2">
       <div class="column">
         <span style="color: rgb(38, 8, 168);">01.</span>
         <h4 class="subtitle is-4" style="color: rgb(14, 10, 51);">PLANIFICATION ET STRATÉGIE</h4>
+        <hr>
         <p class="subtitle is-6">On se rencontre, on discute de votre vision de votre projet et on évalue toutes les possibilités. Suite à cela, nous planifions la meilleure stratégie possible pour mener votre projet au-delà de vos espérances.</p>
       </div>
+    </div>
+    <div class="card m-2 p-2">
       <div class="column">
         <span style="color: rgb(38, 8, 168);">02.</span>
         <h4 class="subtitle is-4" style="color: rgb(14, 10, 51);">DESIGN ET DÉVELOPPEMENT</h4>
+        <hr>
         <p class="subtitle is-6">Il est primordial que votre site Web reflète l’image de votre entreprise, c’est pourquoi nous vous fournirons un design qui saura bien vous représenter. Ensuite vient le temps de la programmation pour que votre site ait toutes les fonctionnalités techniques dont vous avez besoin.</p>
+
       </div>
+    </div>
+    <div class="card m-2 p-2">
       <div class="column">
         <span style="color: rgb(38, 8, 168);">03.</span>
         <h4 class="subtitle is-4" style="color: rgb(14, 10, 51);">TESTS ET MISE
           EN LIGNE
           </h4>
+          <hr>
         <p class="subtitle is-6">Il s’agit d’une étape très importante pour que vous soyez satisfait du résultat final : on analyse en profondeur toutes les pages, vérifie chaque lien, remplit les formulaires etc. Bref, on teste l’ensemble du site pour s’assurer qu’aucun bogue n’est présent. Ensuite, il ne reste qu’à mettre le site en ligne et à être fier du travail accompli!</p>
       </div>
+      </div>
+      <div class="card m-2 p-2">
       <div class="column">
         <span style="color: rgb(38, 8, 168);">04.</span>
         <h4 class="subtitle is-4" style="color: rgb(14, 10, 51);">SERVICE
           APRÈS-VENTE
           </h4>
+          <hr>
         <p class="subtitle is-6">Le projet est terminé, tout fonctionne parfaitement, avons-nous terminé notre travail? Certainement pas! Nous serons présents par la suite pour vous aider et répondre à vos questions.</p>
       </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -254,22 +279,22 @@
 
 
 
-<section class="section" style="background-color: lightgrey; background-position: center; background-repeat: no-repeat;background-size: cover; border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-  <h1 class="title is-5 has-text-centered">Discutons de votre projet!</h1>
+<section class="section" style="background-image: url(/static/image/background-g01b7930b1_1920.jpg); background-position: center; background-repeat: no-repeat;background-size: cover; border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+  <h1 class="title is-5 has-text-centered has-text-white">Discutons de votre projet!</h1>
   <div class="container">   
     <div class="field">
       <div class="control">
         <form method="post">
           {% csrf_token %}
-          <label class="label">Nom</label>
-          <input name="nom" type="text" class="input m-2">
-          <label class="label">Courriel</label>
-          <input name="courrier" type="email" class="input m-2">
+          <label class="label has-text-white">Nom</label>
+          <input name="nom" type="text" class="input m-2" placeholder="Votre nom">
+          <label class="label has-text-white">Courriel</label>
+          <input name="courrier" type="email" class="input m-2" placeholder="Votre courriel">
 
-          <label class="label">Numero</label>
-          <input name="numero" type="text" class="input m-2">
+          <label class="label has-text-white">Numero</label>
+          <input name="numero" type="text" class="input m-2" placeholder="Votre prenom">
        
-          <label class="label">Sujet</label>
+          <label class="label has-text-white">Sujet</label>
           <select class="select" name="sujet" id="">
             <option value="Création de site Web">Création de site Web</option>
             <option value="Référencement Google">Référencement Google</option>
@@ -278,7 +303,7 @@
             <option value="Marketing">Marketing</option>
             <option value="Autre">Autre</option>
           </select>
-            <label class="label">Mesage</label>
+            <label class="label has-text-white">Mesage</label>
           <textarea name="message" cols="42" rows="10" placeholder="Message">
 
           </textarea>
