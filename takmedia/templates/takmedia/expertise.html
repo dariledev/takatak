@@ -5,17 +5,19 @@
 
 {% block content %}
 
-<section class="hero" style="background-image: url(/static/image/gears-g9b6cd6a4f_1920.jpg); background-position: center; background-repeat: no-repeat;background-size: cover; height: 70vh; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+<section class="hero" style="background-image: url(/static/image/banner-gfffcc226a_1920.jpg); background-position: center; background-repeat: no-repeat;background-size: cover; height: 70vh; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
     <div class="hero-body">
        
     </div>
-    <h1 class="title is-5 has-text-centered has-text-white">Notre Savoir faire</h1>
-    <h4 class="subtitle is-5 has-text-centered has-text-white">Propulsez votre présence Web au niveau supérieur.</h4>
 </section>
 
 
 <section class="section" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
     <div class="container">
+        <h1 class="title is-5 has-text-centered" style="color:rgb(14, 10, 51);">Notre Savoir faire</h1>
+        <h4 class="subtitle is-5 has-text-centered" style="color:rgb(14, 10, 51);">Propulsez votre présence Web au niveau supérieur.</h4>
+
+        
         <p class="subtitle is-6">
             Pour favoriser votre succès, nous utilisons les plus récentes technologies en matière de marketing numérique et nous nous assurons que votre site Web soit le plus performant, efficace et évolutif possible.
         </p>
@@ -82,13 +84,13 @@
     </div>
 </section>
 
-<section class="section" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+<section class="section" style="font-family:fantasy;">
     <div class="container">
-        <h1 class="title is-2 has-text-centered">Foire aux questions</h1>
-        <p class="subtitle is-6 has-text-centered">Cette foire aux questions vous permet de trouver rapidement les renseignements dont vous avez besoin</p>
+        <h1 class="title is-2 has-text-centered" style="color: rgb(14, 10, 51);">Foire aux questions</h1>
+        <p class="subtitle is-5 has-text-centered">Cette foire aux questions vous permet de trouver rapidement les renseignements dont vous avez besoin</p>
         <div class="card m-2 p-2">
             <h1 class="title is-5" style="color: rgb(14, 10, 51);">Combien coûte un site web ?</h1>
-            <p class="subtitle is-6">Le prix de conceptions de sites web varie généralement entre 5000 $ et 25 000 $. Cependant, le coût final dépend vraiment du type de site Web dont vous avez besoin. Nous avons récemment écrit un guide complet sur le coût d’un site Web pour vous donner une idée des différentes options disponibles.</p>
+            <p class="subtitle is-6">Le prix de conceptions de sites web varie généralement entre 5000 € et 25 000 €. Cependant, le coût final dépend vraiment du type de site Web dont vous avez besoin. Nous avons récemment écrit un guide complet sur le coût d’un site Web pour vous donner une idée des différentes options disponibles.</p>
         </div>
 
         <div class="card m-2 p-2">
@@ -161,58 +163,42 @@
 
 
 
-
-<section class="section" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-    <div class="container">
-        <h1 class="title is-5" style="color: rgb(14, 10, 51);">Discutons de votre projet!</h1>
-
-        <form  method="post">
-            
-            <label class="label">Nom complet</label>
-            <input type="text" class="input">
-
-            <label class="label">Courriel</label>
-            <input type="text" class="input">
-
-            <label class="label">Telephone</label>
-            <input type="text" class="input">
-
-            <label class="label">Type d'objet</label>
-            <div class="control">
-                <label class="radio">
-                  <input type="radio" name="answer">
-                  Création de site Web
-                </label>
-                <label class="radio">
-                  <input type="radio" name="answer">
-                  Référencement Google
-                </label>
-                <label class="radio">
-                    <input type="radio" name="answer">
-                    Application web
-                  </label>
-
-                  <label class="radio">
-                    <input type="radio" name="answer">
-                    Google Add
-                  </label>
-
-                  <label class="radio">
-                    <input type="radio" name="answer">
-                    Marketing
-                  </label>
-
-                  <label class="radio">
-                    <input type="radio" name="answer">
-                    Autre
-                  </label>
-
-              </div>
-              <input type="submit" class="button is-medium mt-2 is-link">
-
-        </form>
+<section class="section" style="background-image: url(/static/image/banner-ga962d4646_1920.jpg); background-position: center; background-repeat: no-repeat;background-size: cover; border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <h1 class="title is-4 has-text-centered has-text-white">Discutons de votre projet!</h1>
+    <div class="container">   
+      <div class="field">
+        <div class="control">
+          <form method="post">
+            {% csrf_token %}
+            <label class="label has-text-white">Nom</label>
+            <input name="nom" type="text" class="input m-2" placeholder="Votre nom">
+            <label class="label has-text-white">Courriel</label>
+            <input name="courrier" type="email" class="input m-2" placeholder="Votre courriel">
+  
+            <label class="label has-text-white">Numero</label>
+            <input name="numero" type="text" class="input m-2" placeholder="Votre prenom">
+         
+            <label class="label has-text-white">Sujet</label>
+            <select class="select" name="sujet" id="">
+              <option value="Création de site Web">Création de site Web</option>
+              <option value="Référencement Google">Référencement Google</option>
+              <option value="Application web">Application web</option>
+              <option value="Google Ads (SEM)">Google Ads (SEM)</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Autre">Autre</option>
+            </select>
+              <label class="label has-text-white">Mesage</label>
+            <textarea name="message" cols="42" rows="10" placeholder="Message">
+  
+            </textarea>
+            <br>
+         
+            <input type="submit" class="button is-rounded is-link is-small">
+          </form>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
 <!--<div id="modal-js-example" class="modal">
     <div class="modal-background"></div>

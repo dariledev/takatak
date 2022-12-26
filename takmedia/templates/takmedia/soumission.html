@@ -11,37 +11,37 @@
         <p class="subtitle is-6 has-text-centered">Nos heures de travail officielles sont du lundi au vendredi de 8h à 18h. Cependant, n’hésitez pas à nous appeler en dehors de ces heures, il nous fera plaisir de vous répondre si nous sommes disponibles</p>
         
         <div class="box" style="background-color:lightgrey;">
-            <h1 class="title is-4" style="color: rgb(14, 10, 51);">LÂCHEZ NOUS UN COUP DE FIL !</h1>
-        <h4 class="subtitle is-5 has-text-centered">CONTACTEZ-NOUS</h4>
-        <p class="subtitle is-7" style="color: rgb(14, 10, 51)">Phone: +241 62-923-520 <br>
-           phone:  +216 51-208-699</p>
-        <p class="subtitle is-7" style="color: rgb(14, 10, 51)">Adress email: tak.media@tech.com</p>
+            <h1 class="title is-4" style="color: rgb(14, 10, 51);">LÂCHEZ NOUS UN COUP DE FIL ! </h1>
+        <h4 class="subtitle is-5 has-text-centered">CONTACTEZ-NOUS &#128172;</h4>
+          <p class="subtitle is-5" style="color: rgb(14, 10, 51)">Appelez nous en un clique </p>
+        <a href="tel:62923520" style="color: rgb(14, 10, 51)">Phone: +241 62-923-520 </a><br>
+        <a href="tel:+21651208699" style="color: rgb(14, 10, 51)">Fax +216 51-208-699</a> <br>
+        <a href ="mailto:takmediaservice@gmail.com" style="color: rgb(14, 10, 51)">E-mail: takmediaservice@gmail.com</a>
     </div>
         </div>   
     
 </section>
-
-<section class="section" style="background-color: lightgrey; background-position: center; background-repeat: no-repeat;background-size: cover; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+<section class="section" style="background-image: url(/static/image/banner-ga962d4646_1920.jpg); background-position: center; background-repeat: no-repeat;background-size: cover; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
     <div class="container">
-     <h4 class="subtitle is-5" style="color: rgb(14, 10, 51);">Obtenez une soumission gratuite</h4>
-      <p class="subtitle is-6 has-text-centered">Profitez d’un service personnalisé et de qualité. Si vous avez des demandes ou des questions, vous recevrez une réponse dans les 24h.</p>
+     <h4 class="subtitle is-5 has-text-white">Obtenez une soumission gratuite</h4>
+      <p class="subtitle is-6 has-text-centered has-text-white">Profitez d’un service personnalisé et de qualité. Si vous avez des demandes ou des questions, vous recevrez une réponse dans les 24h.</p>
       <div class="field">
         <div class="control">
           <form method="post">
             {% csrf_token %}
-            <label class="label">Nom</label>
+            <label class="label has-text-white">Nom</label>
             <input type="text" class="input m-2" name="nom">
-            <label class="label">Courriel</label>
+            <label class="label has-text-white">Courriel</label>
             <input type="email" class="input m-2" name="courrier">
   
-            <label class="label">Numero</label>
+            <label class="label has-text-white">Numero</label>
             <input type="text" class="input m-2" name="numero">
 
-            <label class="label">Entreprise</label>
+            <label class="label has-text-white">Entreprise</label>
             <input type="text" class="input m-2" name="entreprise">
          
 
-            <label  class="label">Sujet</label>
+            <label  class="label has-text-white">Sujet</label>
             <select class="select" name="sujet" id="">
               <option value="Création de site Web">Création de site Web</option>
               <option value="Référencement Google">Référencement Google</option>
@@ -53,13 +53,13 @@
 
             </select>
 
-              <label class="label">Mesage</label>
+              <label class="label has-text-white">Mesage</label>
             <textarea name="message" id="" cols="42" rows="10"  placeholder="Message">
   
             </textarea>
             <br>
          
-            <input type="submit" class="button is-rounded is-link">
+            <input type="submit" class="button is-rounded is-small is-link">
           </form>
         </div>
       </div>
