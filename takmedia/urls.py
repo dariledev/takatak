@@ -19,6 +19,10 @@ urlpatterns = [
     path('analyse-performances-web-google-analytics/', views.Analyse_performance, name='analyse-web'),
     path('digital-social/', views.digital_social, name='digital-social'),
     path('success/', views.success_page, name='success'),
+    path('equipe-taktak-media/', views.team, name='equipe'),
+    path('blog/', views.blog, name='blog'),
+
+
 
 
 

@@ -1,0 +1,146 @@
+{% extends 'takmedia/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="hero" style="background-image: url(/static/image/b1.jpg ); background-position: center; background-repeat: no-repeat;background-size: cover; height: 70vh; border-radius: 1px solid; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="hero-body">
+
+    </div>
+    
+</section>
+
+
+
+
+
+
+<section class="section has-text-centered" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+        <h4 class="title is-4 has-text-centered" style="color: rgb(14, 10, 51); ">Blogue</h1>
+            <p class="subtitle is-6 has-text-centered">
+                Le seul blogue qu’il faut lire pour se tenir au courant des innovations importantes en marketing digital, connaître nos meilleurs conseils en transformation numérique et réussir votre stratégie de commercialisation internationale sur le Web.
+            </p>
+
+            <div class="columns">
+                {% for blog_posts in blog_post %}
+                <div class="column">
+                    <img src="{{ blog_posts.image.url }}" style="height: 400px;" alt="">
+                    
+                </div>
+                <div class="column">
+                    <h5 class="subtitle is-6">{{blog_posts.date|date:"d /m /y"}} - Par </h6>
+                    <h4 class="subtitle is-4">{{blog_posts.titre}}</h4>
+                    <h4 class="subtitle is-4">{{blog_posts.image.url}}</h4>
+
+
+                    <a href="">Lire l'article</a> 
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+</section>
+
+<!--<section class="section has-text-centered" style="background-color:rgb(14, 10, 51); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="container">
+        <h1 class="title is-5 has-text-white">BESOIN D'AIDE ?</h1>
+        <a href="{% url 'soumission' %}" class="button">DEMANDER  UNE SOUMISSION</a>
+
+    </div>
+</section>-->
+
+
+
+
+<style>
+
+
+
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+/*
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
+{% endblock %}

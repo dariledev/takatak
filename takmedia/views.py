@@ -83,8 +83,15 @@ def Analyse_performance(request):
 def digital_social(request):
     return render(request, 'takmedia/digital_social.html')
 
+
 def success_page(request):
     return render(request, 'takmedia/success.html')
+
+
+def blog(request):
+    blog_post = Blog.objects.all()
+    return render(request, 'takmedia/blog.html', {'blog_post':blog_post})
+
 
 
 
