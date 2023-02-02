@@ -1,0 +1,35 @@
+{% extends 'takmedia/base.html' %}
+{% load static %}
+{% load hitcount_tags %}
+{% load social_share %}
+
+{% block content %}
+
+
+
+
+<!----- REMPLACER PAR POST---->
+<section class="section">
+    <div class="container">
+<div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+
+       
+        <div class="card p-3">
+            <i class="fa-regular fa-eye"> {% get_hit_count for post %}</i>
+                    <h6 class="subtitle is-6" style="font-family:fantasy;">{{ post.date }} Par - {{ post.auteur }}</h6>
+                    
+                    <br>
+                    <p class="subtitle is-6" style="font-family:fantasy;">{{ post.body|safe }}</p>
+                    <br>
+
+            </div>
+
+            {% post_to_facebook "{{object.titre}}." object_or_url "Post to Facebook!" %}
+            {% post_to_linkedin object_or_url %}
+            {% post_to_telegram "New Song: " object_or_url %}
+            {% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Post to Twitter" %}
+            {% send_email object.title "New Song: {{object.title}}. Check it out!" object_or_url "Share via email" %}
+            {% post_to_whatsapp object_or_url "Share via WhatsApp" %}
+</section>
+
+{% endblock content %}

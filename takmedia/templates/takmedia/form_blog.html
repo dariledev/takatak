@@ -1,0 +1,19 @@
+
+
+
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="titre" placeholder="grand titre">
+    <textarea name="description1" id="" cols="30" rows="10"></textarea>
+    <input type="text" name="sous_titre" placeholder="sous titre">
+    <textarea name="description2" id="" cols="30" rows="10"></textarea>
+    <input type="text" name="sous_titre2" placeholder="sous titre">
+    <input type="file" name="image">
+    <input type="text" name="slug">
+    <textarea name="description3" id="" cols="30" rows="10"></textarea>
+    <textarea name="description4" id="" cols="30" rows="10"></textarea>
+
+    <input type="submit">
+</form>

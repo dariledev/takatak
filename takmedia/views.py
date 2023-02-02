@@ -1,7 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView, DetailView
 from .forms import *
+from .models import *
+from django.http import HttpResponse, JsonResponse
+from django.views.generic import View
 
-
+from .utils import render_to_pdf #created in step 
+from django.utils import timezone
+from django.contrib.auth import authenticate, login
+from hitcount.views import HitCountDetailView
 
 
 
@@ -15,6 +22,29 @@ def index(request):
             soumi.save()
             return redirect('success')
     return render(request, 'takmedia/index.html')
+
+
+def register(request):
+    regis = RegisterUserForm()
+    if request.method == 'POST':
+        regis = RegisterUserForm(request.POST)
+        if regis.is_valid():
+            regis.save()
+            return redirect('login')
+
+    return render(request, 'takmedia/register.html',{'regis':regis})
+
+
+
+def loginuser(request):
+    username = request.POST.get("username")
+    password = request.POST.get("password")
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return redirect('index')
+    return render(request, 'takmedia/login.html')
+
 
 
 def apropos(request):
@@ -88,11 +118,61 @@ def success_page(request):
     return render(request, 'takmedia/success.html')
 
 
+
+def formulaire_blog(request):
+    form_blog = BlogForm()
+    if request.method =='POST':
+        form_blog = BlogForm(request.POST, request.FILES)
+        if form_blog.is_valid():
+            fb = form_blog.save(commit=False)
+            fb.auteur = request.user
+            #fb.date = request.user
+            fb.save()
+            return redirect('blog')
+    return render(request, 'takmedia/form_blog.html', {'form_blog':form_blog})
+
+
+
+
 def blog(request):
     blog_post = Blog.objects.all()
+    #post = Post.objects.all()
+
     return render(request, 'takmedia/blog.html', {'blog_post':blog_post})
 
 
+
+
+class PostDetailView(HitCountDetailView):
+    model = Blog
+    template_name = 'takmedia/blog_detail.html'
+    context_object_name = 'post'
+    slug_field = 'slug'
+    # set to True to count the hit
+    count_hit = True
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailView, self).get_context_data(**kwargs)
+        context.update({
+        'popular_posts': Blog.objects.order_by('hit_count_generic__hits'),
+        })
+        return context
+
+
+
+
+
+
+class GeneratePdf(View):
+    def get(self, request, *args, **kwargs):
+        data = {
+             'today': timezone.now(), 
+             'amount': 39.99,
+            'customer_name': 'Cooper Mann',
+            'order_id': 1233434,
+        }
+        pdf = render_to_pdf('takmedia/commande.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
 
 
 

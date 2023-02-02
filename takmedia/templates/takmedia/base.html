@@ -9,14 +9,22 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/091ff265be.js" crossorigin="anonymous"></script>
-  <title>TaKTaK-MÉDIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=Roboto&display=swap" rel="stylesheet">
+  <script src=" https://cdn.jsdelivr.net/npm/vue "></script> 
+  <title>TAK-MEDIA</title>
 </head>
 <body>
   
-  <nav class="navbar" style="padding: 5px;" role="navigation" aria-label="main navigation">
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v15.0" nonce="HqE4uAlZ"></script>
+
+
+  <nav class="navbar is-fixed" style="padding: 5px; background-color: rgb(3, 5, 26);" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a href="{% url 'index' %}">
-        <img src="{% static 'image/logo/TAK-MEDIA_icône_Couleur_.png' %}" style="height: 40px; width: 50; margin-top: 5px;">
+        <img src="{% static 'image/logo/TAK-MEDIA_icône_Blanc_.png' %}" style="height: 40px; width: 50; margin-top: 5px;">
       </a>
   
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -30,7 +38,7 @@
       <div class="navbar-start">
 
         <div class="navbar-item has-dropdown is-hoverable">
-          <a href="{% url 'expertise' %}" class="navbar-link is-left" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          <a href="{% url 'expertise' %}" class="navbar-link is-left has-text-info" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: brown;">
             Expertises
           </a>
   
@@ -66,30 +74,30 @@
             </a>
           </div>
         </div>
-        <a class="navbar-item" href="{% url 'clients' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <a class="navbar-item has-text-info" href="{% url 'clients' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
           Clients
         </a>
 
-        <a class="navbar-item" href="{% url 'equipe' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <a class="navbar-item has-text-info" href="{% url 'equipe' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
         Notre equipe
         </a>
 
-        <!--<a class="navbar-item" href="{% url 'blog' %}">
+        <a class="navbar-item has-text-info" href="{% url 'blog' %}">
           Blog
-        </a>-->
+        </a>
 
         <!--<a class="navbar-item">
           Carrières
         </a>
       </div>-->
   
-      <div class="navbar-end">
+     <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is is-rounded is-small" href="{% url 'soumission' %}" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: brown;">
               <strong>Demande d'information</strong>
             </a>
-            <!--<a class="button is-light">
+           <!--<a class="button is-light">
               Log in
             </a>-->
           </div>
@@ -99,16 +107,31 @@
   </nav>
 
 
-  {% block content %}
-  {% endblock %}
+{% block content %}
 
+{% endblock %}
 
 
   <section class="section" style="background-color: rgb(14, 13, 13);">
     <div class="container">
       <p class="subtitle is-6 has-text-white">2022 © Tous droits réservés - TAKTAK-MEDIA</p>
+      <div class="icon-text">
+        <span class="icon has-text-info">
+
+          <a href="https://www.facebook.com/TakMedias" target="_blank"><i class="fa fa-facebook m-2"></i></a>
+          <!--<i class="fa fa-instagram m-2"></i>
+          <i class="fa fa-twitter m-2"></i>-->
+
+
+
+        </span>
+      </div>
+
     </div>
   </section>
+
+
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -134,6 +157,9 @@ $navbarBurgers.forEach( el => {
 });
   </script>
 
+
+
+
 <script>
   AOS.init();
 </script>
@@ -141,7 +167,8 @@ $navbarBurgers.forEach( el => {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
   body {
-    font-family: 'Libre Baskerville', serif;
+   
+    font-family: 'Roboto', sans empattement ;
 
   }
 </style>

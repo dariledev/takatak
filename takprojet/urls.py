@@ -25,5 +25,12 @@ admin.site.site_title = 'Administration'
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('takmedia.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+   
+    path('ckeditor/',include('ckeditor_uploader.urls')),
+    path('hitcount/',include('hitcount.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
 
+]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

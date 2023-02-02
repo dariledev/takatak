@@ -9,47 +9,37 @@
     <div class="hero-body">
 
     </div>
-    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z63K0R9P6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z63K0R9P6Q');
+</script>
 </section>
 
-
-
-
-
-
-<section class="section has-text-centered" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+<section class="section" style=" font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding: 15px;">
     <div class="container">
-        <h4 class="title is-4 has-text-centered" style="color: rgb(14, 10, 51); ">Blogue</h1>
-            <p class="subtitle is-6 has-text-centered">
+        <h4 class="title is-2 has-text-centered" style="color: rgb(46, 29, 198); ">Blogue</h4>
+
+            <p class="subtitle is-5 has-text-centered mt-3">
                 Le seul blogue qu’il faut lire pour se tenir au courant des innovations importantes en marketing digital, connaître nos meilleurs conseils en transformation numérique et réussir votre stratégie de commercialisation internationale sur le Web.
             </p>
-
-            <div class="columns">
                 {% for blog_posts in blog_post %}
-                <div class="column">
-                    <img src="{{ blog_posts.image.url }}" style="height: 400px;" alt="">
-                    
-                </div>
-                <div class="column">
-                    <h5 class="subtitle is-6">{{blog_posts.date|date:"d /m /y"}} - Par </h6>
-                    <h4 class="subtitle is-4">{{blog_posts.titre}}</h4>
-                    <h4 class="subtitle is-4">{{blog_posts.image.url}}</h4>
-
-
-                    <a href="">Lire l'article</a> 
-                </div>
+                <div class="card m-4 is-small" style="background-color:rgb(185, 177, 255); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; box-shadow: 4px 4px rgb(168, 161, 159); margin-top: 5px; padding: 10px;">
+                  <img src="{{ blog_posts.image.url }}" style="height: 150px;"  alt="">
+                    <h6 class="subtitle is-6 has-text-black" style="font-family: 'Courier New', Courier, monospace;">{{blog_posts.date}} - Par {{blog_posts.auteur}} </h6>
+                      <h4 class="subtitle is-5 has-text-black" style="font-family:'Courier New', Courier, monospace; font-weight: bold;">{{blog_posts.titre}}</h4>
+                      <a href="{% url 'detail' blog_posts.slug  %}" class="button is-info is-small">Lire l'article</a>
+                    </div>
                 {% endfor %}
             </div>
     </div>
 </section>
 
-<!--<section class="section has-text-centered" style="background-color:rgb(14, 10, 51); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-    <div class="container">
-        <h1 class="title is-5 has-text-white">BESOIN D'AIDE ?</h1>
-        <a href="{% url 'soumission' %}" class="button">DEMANDER  UNE SOUMISSION</a>
 
-    </div>
-</section>-->
 
 
 
